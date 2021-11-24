@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+2가지 방식으로 click 이벤트와 mouseover 이벤트를 등록시켜 배경색 바꾸기<br>
+<script>
+	var color=["white","yellow","aqua","purple"];
+	var i=0;
+	function colorBg(){
+		i++;
+		if(i>=color.length){
+			i=0;
+		}
+		document.getElementsByTagName("body")[0].style.backgroundColor=color[i];
+		var bodytag = document.getElementsByTagName("body")[0];
+		bodytag.style.backgroundColor=color[i];
+	}
+	
+	window.onload = function(){
+		//btn2
+		document.getElementById("btn2").onclick = function(){
+			colorBg();
+		}
+		//btn4
+		document.getElementById("btn4").onmouseover = function(){
+			colorBg();
+		}
+		
+	}
+	
+	
+
+</script>
+
+<button onclick="colorBg();">button1</button>
+<button id="btn2">button2</button>
+<button onmouseover="colorBg();">button3</button>
+<button id="btn4">button4</button>
+
+</body>
+</html>

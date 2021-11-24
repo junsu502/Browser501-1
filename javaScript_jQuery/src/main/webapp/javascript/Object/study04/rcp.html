@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>수학객체</title>
+</head>
+<body>
+
+<script>
+	let user = prompt("가위, 바위, 보 중 선택하세요");
+	const scissors = "가위";
+	const rock = "바위";
+	const paper = "보";
+	if(user == scissors){
+		user = 1;
+	}else if(user == rock){
+		user = 2;
+	}else if(user == paper){
+		user = 3;
+	}
+	let rcp = Math.floor((Math.random()*3+1)); 
+	if(rcp == 1){
+		document.write("<img src='../../images/math_img_1.jpg'>");
+		setTimeout(function(){
+		switch (user){
+		case 1 :
+			alert("무승부입니다.");
+			break;
+		case 2 :
+			alert("이겼습니다! 축하합니다!!");
+			break;
+		case 3 :
+			alert("틀렸네요 다음기회에 다시 도전하세요!");
+			break;
+		}
+		}, 100);
+	}else if(rcp == 2){
+		document.write("<img src='../../images/math_img_2.jpg'>");
+		setTimeout(function(){
+		switch (user){
+		case 1 :
+			alert("틀렸네요 다음기회에 다시 도전하세요!");
+			break;
+		case 2 :
+			alert("무승부입니다.");
+			break;
+		case 3 :
+			alert("이겼습니다! 축하합니다!!");
+			break;
+		}
+		}, 100);
+	}else if(rcp == 3){
+		document.write("<img src='../../images/math_img_3.jpg'>");
+		setTimeout(function(){
+		switch (user){
+		case 1 :
+			alert("이겼습니다! 축하합니다!!");
+			break;
+		case 2 :
+			alert("틀렸네요 다음기회에 다시 도전하세요!");
+			break;
+		case 3 :
+			alert("무승부입니다.");
+			break;
+		}
+		}, 100);
+	}
+</script>
+</body>
+</html>

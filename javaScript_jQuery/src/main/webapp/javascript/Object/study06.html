@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+ 	
+	
+	
+	
+	function student(name, korean, math, english, science){
+		
+		this.이름 = name;
+		this.국어 = korean;
+		this.수학 = math;
+		this.영어 = english;
+		this.과학 = science;
+		
+		this.getsum = function(){
+// 			sum = korean+math+english+science;
+			return this.국어+this.수학+this.영어+this.과학;
+		}
+		this.getavg = function(){
+			return this.getsum()/4;
+		}
+		
+		this.toString = function(){
+			return this.이름+"\t"+this.getsum()+"\t"+this.getavg();
+		}
+	}
+	
+	var studentarr =[]; 
+	studentarr.push(new student("홍길동1",87,88,99,100));
+	studentarr.push(new student("홍길동2",83,81,70,52));
+
+	var output = '이름\t총점\t평균\n';
+// 	student(prompt("이름을 입력하세요."),prompt("국어 점수를 입력하세요."), prompt("수학 점수를 입력하세요."),prompt("영어 점수를 입력하세요."),prompt("과학 점수를 입력하세요."));
+	for(var i in studentarr){
+		output = output+studentarr[i].toString()+"\n";
+	}	
+	alert(output);
+	
+</script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+	var num=0;//전역변수
+	
+	function testFnc(){
+		var a = 500;	
+		num++;
+		if(num == 10) return;
+		document.write(num,"<br>");
+		testFnc();
+		
+	}
+	document.write(num,"<br>");
+	testFnc();
+	document.write(num,"<br>");
+</script>
+</body>
+</html>
